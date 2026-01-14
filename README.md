@@ -31,7 +31,7 @@ Or just say "map this codebase" and it will trigger automatically.
 
 ## What it Does
 
-Cartographer orchestrates multiple Sonnet subagents (with 1M token context windows) to analyze your entire codebase in parallel, then synthesizes their findings into:
+Cartographer orchestrates multiple Sonnet subagents to analyze your entire codebase in parallel, then synthesizes their findings into:
 
 - `docs/CODEBASE_MAP.md` - Detailed architecture map with file purposes, dependencies, data flows, and navigation guides
 - Updates `CLAUDE.md` with a summary pointing to the map
@@ -52,6 +52,12 @@ If `docs/CODEBASE_MAP.md` already exists, Cartographer will:
 3. Merge updates with existing documentation
 
 Just run `/cartographer` again to update.
+
+## Token Usage
+
+⚠️ **NOTE:** This skill spawns Sonnet subagents for accurate, reliable analysis. Depending on codebase size, this can use significant tokens. Be mindful of your usage.
+
+You can ask Claude to use Haiku subagents instead for a cheaper run, but accuracy may suffer on complex codebases.
 
 ## Requirements
 
