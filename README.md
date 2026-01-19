@@ -21,34 +21,42 @@ Cartographer requires Cursor's **agent skills** and **subagents** features, whic
 
 ## Installation
 
-### Option 1: Clone Repository (Recommended)
+### Quick Install
 
-Clone this repository to your project's `.cursor` directory:
+1. Clone this repository to a temporary folder:
 
 ```bash
-# For project-specific use
-git clone https://github.com/MPGek/cartographer-cursor.git .cursor
+git clone https://github.com/MPGek/cartographer-cursor.git /tmp/cartographer-cursor
 ```
 
-Or for global use across all projects:
+2. Copy the `.cursor` folder to your project:
 
 ```bash
-# For user-level use (all projects)
-git clone https://github.com/MPGek/cartographer-cursor.git ~/.cursor
+# Copy to your project root
+cp -r /tmp/cartographer-cursor/.cursor /path/to/your/project/
+
+# Clean up (optional)
+rm -rf /tmp/cartographer-cursor
 ```
 
-### Option 2: Manual Setup
+**Windows (PowerShell):**
 
-1. Copy the `.cursor/` directory to your project root
-2. Ensure Python 3.11+ is installed
-3. Set up Python environment:
+```powershell
+git clone https://github.com/MPGek/cartographer-cursor.git $env:TEMP\cartographer-cursor
+Copy-Item -Recurse $env:TEMP\cartographer-cursor\.cursor -Destination .
+Remove-Item -Recurse -Force $env:TEMP\cartographer-cursor
+```
+
+### Global Install (All Projects)
+
+To use Cartographer across all your projects, copy to your user-level `.cursor` folder:
 
 ```bash
-# Create virtual environment
-uv venv
+# macOS/Linux
+cp -r /tmp/cartographer-cursor/.cursor ~/.cursor
 
-# Install dependencies
-uv pip install -r requirements.txt
+# Windows (PowerShell)
+Copy-Item -Recurse $env:TEMP\cartographer-cursor\.cursor -Destination $env:USERPROFILE\.cursor
 ```
 
 ### Restart Cursor
