@@ -165,7 +165,7 @@ total_tokens: N
 
 [Mermaid diagram showing high-level architecture]
 
-```mermaid
+:::mermaid
 graph TB
     subgraph Client
         Web[Web App]
@@ -182,7 +182,7 @@ graph TB
     Server --> Auth
     Server --> DB
     Server --> Cache
-```
+:::
 
 [Adapt the above to match the actual architecture]
 
@@ -210,7 +210,7 @@ graph TB
 
 [Mermaid sequence diagrams for key flows]
 
-```mermaid
+:::mermaid
 sequenceDiagram
     participant User
     participant Web
@@ -223,7 +223,7 @@ sequenceDiagram
     DB-->>API: Result
     API-->>Web: Response
     Web-->>User: Update UI
-```
+:::
 
 [Create diagrams for: auth flow, main data operations, etc.]
 
