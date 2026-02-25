@@ -22,7 +22,6 @@ This repository contains specialized Cursor agents and skills designed for advan
 **Structure**:
 - Orchestrator: `.cursor/skills/cartographer/SKILL.md`
 - Scanner: `.cursor/skills/cartographer/scripts/scan-codebase.py`
-- Subagent: `.cursor/agents/codebase-analyzer.md`
 
 **Usage**: Type `/cartographer` in Cursor chat or use natural language triggers like "map this codebase" or "document the architecture".
 
@@ -37,12 +36,12 @@ This repository contains specialized Cursor agents and skills designed for advan
 This repository provides the Cartographer skill for Cursor - a codebase mapping tool that uses orchestration patterns to analyze codebases of any size. The main agent coordinates work, while specialized subagents perform read-only analysis in parallel, ensuring efficient processing without hitting context limits.
 
 **Current Codebase**:
-- 7 files, 8,525 tokens
-- 3 core components (Orchestrator, Scanner, Analyzer)
+- 6 files, 11,042 tokens
+- 2 core components (Orchestrator, Scanner)
 - MIT Licensed
-- Last mapped: 2026-01-19
+- Last mapped: 2026-02-25
 
 For detailed architecture, see [docs/CODEBASE_MAP.md](docs/CODEBASE_MAP.md).
 
 ---
-*Last updated: 2026-01-19*
+*Last updated: 2026-02-25*
